@@ -1,26 +1,26 @@
-import React from 'react'
+import React from "react";
 
-const ImageCard = ({image}) => {
-    const tags= image.tags.split(',');
+const ImageCard = ({ image }) => {
+  const tags = image.tags.split(",");
 
   return (
-    <div className=" max-w-sm rounded overflow-hidden shadow-lg">
+    <div className="max-w-sm rounded overflow-hidden shadow-lg">
       <img src={image.webformatURL} alt="" className="w-full" />
       <div className="px-6 py-4">
-        <div className="font-bold text-black-500 mb-2">
-          TPhoto by{image.user}
+        <div className="font-bold text-purple-500 text-xl mb-2">
+          Photo by {image.user}
         </div>
         <ul>
-          <li className="text-black-700 text-base">
-            <strong>Views:</strong>
+          <li>
+            <strong>Views: </strong>
             {image.views}
           </li>
-          <li className="text-black-700 text-base">
-            <strong>Downloads:</strong>
+          <li>
+            <strong>Downloads: </strong>
             {image.downloads}
           </li>
-          <li className="text-black-700 text-base">
-            <strong>Likes:</strong>
+          <li>
+            <strong>Likes: </strong>
             {image.likes}
           </li>
         </ul>
@@ -34,10 +34,9 @@ const ImageCard = ({image}) => {
             #{tag}
           </span>
         ))}
-        
       </div>
     </div>
   );
-}
+};
 
-export default ImageCard
+export default ImageCard;
